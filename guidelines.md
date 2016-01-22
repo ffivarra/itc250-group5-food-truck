@@ -30,17 +30,9 @@ The application must:
 
 **Extra Extra Credit:** You can gain up to 20 extra points for allowing sides or toppings to particular items (for example, $.25 cents for adding cheese, etc.)
 
- 
 
- 
 
- 
-
- 
-
- 
-
-For this lab our entire requirement will be:
+**For this lab our entire requirement will be:**
 
 Build a PHP page that uses a form to allow clients to build their own sundae and select toppings. The sundae must be allowed to have a choice of at least three toppings, for example:
 
