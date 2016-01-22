@@ -41,7 +41,7 @@ class Order
      * @return mixed
      */
     public function getTotal(){
-        return $this->subtotal * SALES_TAX;
+        return $this->getSubTotal() * SALES_TAX;
     }
 
 
