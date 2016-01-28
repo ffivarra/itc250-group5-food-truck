@@ -69,7 +69,7 @@
             
             <br>
             
-            <button type="submit" name="submit" value="add">Add to Order</button>
+            <button class="myButton" type="submit" name="submit" value="add">Add to Order</button>
         </form>
 
 </section>

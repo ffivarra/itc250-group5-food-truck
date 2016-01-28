@@ -121,3 +121,39 @@ header, #firstcontent, #secondcontent, #sidebar {
 #pagewrap, header, #firstcontent, #secondcontent, #sidebar, footer {
 	border: solid 1px #ccc;
 }
+
+
+
+/*BUTTON STYLE*/
+.myButton {
+box-shadow: 0px 7px 0px 0px #FFDC19;
+background: #FFEE5B none repeat scroll 5% center
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFE719', endColorstr='#DEC700 ',GradientType=0);
+background-color: #FEEC54;
+display: inline-block;
+cursor: pointer;
+color: #ffffff;
+font-family: Arial;
+font-size: 1.5em;
+padding: 8px 0px;
+text-decoration: none;
+text-shadow: 0px 1px 0px #DAC300;
+margin-bottom: 10px;
+width: 100%;
+text-align: center;
+border: none;
+outline:none;
+}
+
+.myButton:hover {
+
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#DEC700 ', endColorstr='#FFE719',GradientType=0);
+background-color:#FFDC19 ;
+box-shadow: 0px 7px 0px 0px #FFE719;
+color: #fff;
+}
+
+.myButton:active {
+position:relative;
+top:1px;
+}
