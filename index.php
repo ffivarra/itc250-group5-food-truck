@@ -44,11 +44,11 @@
             <td>
                 <div>
                     <span>
-                        <button type="button" data-index="1-1-4" data-sign="-">-</button>
+                        <button class="myButtonQ" type="button" data-index="1-1-4" data-sign="-">-</button>
                     </span>
-                    <input id="" name="" value="0">
+                    <input class="name" id="" name="" value="0">
                     <span>
-                        <button class="" type="button" data-index="1-1-4" data-sign="+">+</button>
+                        <button class="myButtonQ" type="button" data-index="1-1-4" data-sign="+">+</button>
                     </span>
                 </div>
             </td>
