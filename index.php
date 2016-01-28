@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="pagewrap">
 
 
 <!-----Header-------------------->
@@ -18,9 +19,9 @@
 
 
 <!-----Main---------------------->
-<div class="section group">
+<section id="firstcontent">
 
-    <div class="col span_1_of_2">
+
     <h1>Ice Cream Order Online</h1>
         <p>Welcome to our Ice Cream online page</p>
         
@@ -34,24 +35,24 @@
         <br>
         <br>
         
-<tr>      
-    <td>
-            Choose a Quantity																						
-    </td>
-    <br>
+        <tr>      
+            <td>
+                    Choose a Quantity																						
+            </td>
+            <br>
 
-    <td>
-        <div>
-            <span>
-                <button type="button" data-index="1-1-4" data-sign="-">-</button>
-            </span>
-            <input id="" name="" value="0">
-            <span>
-                <button class="" type="button" data-index="1-1-4" data-sign="+">+</button>
-            </span>
-        </div>
-    </td>
-</tr>
+            <td>
+                <div>
+                    <span>
+                        <button type="button" data-index="1-1-4" data-sign="-">-</button>
+                    </span>
+                    <input id="" name="" value="0">
+                    <span>
+                        <button class="" type="button" data-index="1-1-4" data-sign="+">+</button>
+                    </span>
+                </div>
+            </td>
+        </tr>
         
 <hr>
         
@@ -71,13 +72,16 @@
             <button type="submit" name="submit" value="add">Add to Order</button>
         </form>
 
-</div>
-    
-    <div class="col span_1_of_2">
+</section>
+        
+        
+<section id="secondcontent">
+    <h1>
 	Order Detail
-	</div>
+	</h1>
+</section>
 
-</div>
+
     
 
 
@@ -89,6 +93,6 @@
     </section>
 </footer>
 
-
+    </div>
 </body>
 </html>
