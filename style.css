@@ -27,7 +27,8 @@ header {
 	float: left;
 	padding: 5px 15px;
 	margin: 0px 5px 5px 5px;
-    height: 460px;
+    height: 608px;
+    border: solid 1px #ccc;
 }
 
 #sidebar {
@@ -120,7 +121,7 @@ header, #firstcontent, #secondcontent, #sidebar {
 }
 
 #pagewrap, header, #firstcontent, #secondcontent, #sidebar, footer {
-	border: solid 1px #ccc;
+	/*border: solid 1px #ccc;*/
 }
 
 
@@ -195,12 +196,12 @@ top:1px;
 }
 
 .name{
-    
-    height: 41px;
+    height: 44px;
     margin-left: -4px;
     margin-right: -5px;
     border: none;
     margin-top: 8px;
     padding-top: -5px;
     padding-left: 12px;
+	text-align: center;
 }

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Ice Cream Order Online</title>
     <link rel="stylesheet" href="style.css">
+    
+      <script src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+  <script src="js/incrementing.js"></script>
 </head>
 <body>
     <div id="pagewrap">
@@ -25,7 +28,7 @@
     <h1>Ice Cream Order Online</h1>
         <p>Welcome to our Ice Cream online page</p>
         
-        <form action="">
+        <form method = "post" action="index.php" >
             <p>Choose your flavor</p>
             <input type="radio" name="choice" value="chocolate" > Chocolate<br>
             <input type="radio" name="choice" value="bannana" > Bannana<br>
@@ -42,15 +45,27 @@
             <br>
 
             <td>
-                <div>
+  <!--              <div>
                     <span>
-                        <button class="myButtonQ" type="button" data-index="1-1-4" data-sign="-">-</button>
+                        <button class="myButtonQ" type="button" data-sign="-">-</button>
                     </span>
                     <input class="name" id="" name="" value="0">
                     <span>
-                        <button class="myButtonQ" type="button" data-index="1-1-4" data-sign="+">+</button>
+                        <button class="myButtonQ" type="button" data-sign="+">+</button>
                     </span>
-                </div>
+                    
+
+                </div>-->
+                
+              
+    
+                    <form method="post" action="">
+                      <div class="numbers-row">
+                        <!--<label for="name">Choose a Quantity</label>-->
+                        <!--<input type="text" name="french-hens" class="name" value="0">-->
+                      </div>
+               
+    				</form>
             </td>
         </tr>
         
@@ -80,6 +95,9 @@
 	Order Detail
 	</h1>
 </section>
+        
+        
+        
 
 
     

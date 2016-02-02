@@ -6,12 +6,19 @@
  * Date: 1/21/16
  * Time: 10:01 PM
  */
+ 
+ //array to hold items
+$items[] = new Item("Burrito", "Includes awesome sauce!", 7.95);
+$items[] = new Item("Taco", "Includes cheese and lettuce", 3.95);
+$items[] = new Item("Fried Ice Cream", "Includes free sprinkles!", 2.95);
+
+
 class Item
 {
-    private $name;
-    private $description;
-    private $price;
-    private $quantity;
+    public $name = '';
+    public $description = '';
+    public $price = 0;
+    public $quantity = '';
 
     /**
      * Item constructor.

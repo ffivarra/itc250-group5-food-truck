@@ -9,6 +9,10 @@
 
 define('SALES_TAX',0.9);
 
+//array to hold items
+$items[] = new Item("Burrito", "Includes awesome sauce!", 7.95);
+$items[] = new Item("Taco", "Includes cheese and lettuce", 3.95);
+$items[] = new Item("Fried Ice Cream", "Includes free sprinkles!", 2.95);
 
 class Order
 {
