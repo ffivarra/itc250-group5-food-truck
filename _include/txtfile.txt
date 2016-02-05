@@ -1,0 +1,23 @@
+    <input type="radio" name="flavor[]" value="chocolate" checked> Chocolate: $2.39<br>
+    <input type="radio" name="flavor[]" value="banana"> Banana: $3.49<br>
+    <input type="radio" name="flavor[]" value="vanilla"> Vanilla: $1.99<br><br><br>
+    <tr><td>Choose a Quantity</td>
+        <td><div>
+                    <span>
+                        <button id="q-down" class="myButtonQ" type="button" data-index="1-1-4" data-sign="-">-</button>
+                    </span>
+            <input id="quantity" type="number" name="quantity" value="0">
+                    <span>
+                        <button id="q-up" class="myButtonQ" type="button" data-index="1-1-4" data-sign="+">+</button>
+                    </span>
+        </div>
+        </td>
+    </tr><hr>
+    <p>Choose your topping, $.99 each</p>
+
+    <input type="checkbox" name="topping[]" value="Oreo" > Oreo<br>
+    <input type="checkbox" name="topping[]" value="Caramel" > Caramel<br>
+    <input type="checkbox" name="topping[]" value="Fudge" > Fudge<br>
+    <br>
+    <input class="myButton" name="submit" type="submit" >
+</form></section>
