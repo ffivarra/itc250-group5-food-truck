@@ -22,21 +22,21 @@ class menuItems extends Item
      *      'Sprinkles', 0.25
      */
 
-    public static function getItems(){
-
+    public static function getItems()
+    {
         return [
-            $chocolate = new Item('Chocolate','Rich Chocolaty Goodness',2.49),
-            $banana = new Item('Banana','Right Off The Tree',2.99),
-            $vanilla = new Item('Vanilla','Plain Ol\' Vanilla',1.99)
+            $chocolate = new Item('Chocolate', 'Rich Chocolaty Goodness', 2.49),
+            $banana = new Item('Banana', 'Right Off The Tree', 2.99),
+            $vanilla = new Item('Vanilla', 'Plain Ol\' Vanilla', 1.99)
         ];
     }
 
-    public static function getToppings(){
-
+    public static function getToppings()
+    {
         return [
-            $nuts = new Item('Nuts','Crunchy.',0.39),
-            $sprinkles = new Item('Sprinkles', 'Colorful Flakes.',0.24),
-            $fudge = new Item('Fudge','Brown and Sugary',0.99)
+            $nuts = new Item('Nuts', 'Crunchy.', 0.39),
+            $sprinkles = new Item('Sprinkles', 'Colorful Flakes.', 0.24),
+            $fudge = new Item('Fudge', 'Brown and Sugary', 0.99)
         ];
     }
 }

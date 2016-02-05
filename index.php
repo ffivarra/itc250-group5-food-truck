@@ -14,24 +14,13 @@ include_once '_include/menuItems.php';
 include '_include/header.html';
 
 
-
-
-if(isset($_POST['submit'])){
+/** @var TYPE_NAME $_POST */
+if (isset($_POST['submit'])) {
     displayForm();
     displayOrder();
-
-
-}else{
+} else {
     displayForm();
-
 }
 
 
 include '_include/footer.html';
-
-
-
-
-
-
-

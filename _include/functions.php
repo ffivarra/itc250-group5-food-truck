@@ -7,23 +7,25 @@
  */
 
 
-define('PAGE',basename($_SERVER['PHP_SELF']));
+define('PAGE', basename($_SERVER['PHP_SELF']));
 
 
 /**
- *
+ * Display form
  */
-function displayForm(){
+function displayForm()
+{
     $items = menuItems::getItems();
     $toppings = menuItems::getToppings();
     printf(<<<'FORM'
-
     <form action="%s" method="post">
     <p>Choose your flavor</p>
 FORM
-,PAGE);
+, PAGE);
+
+
     /** @var menuItems $items */
-    foreach($items as $item){
+    foreach ($items as $item) {
         $name = $item->getName();
         $price = $item->getPrice();
         $desc = $item->getDescription();
@@ -31,7 +33,7 @@ FORM
         printf(<<<'FORM'
         <input type="radio" name="flavor" value="%s" checked> %s : $%s <br><i>%s</i><br>
 FORM
-            ,$name,$name,$price,$desc
+            , $name, $name, $price, $desc
         );
     }
 
@@ -46,7 +48,7 @@ FORM
 FORM;
 
     /** @var menuItems $toppings */
-    foreach($toppings as $item) {
+    foreach ($toppings as $item) {
         $name = $item->getName();
         $price = $item->getPrice();
         $desc = $item->getDescription();
@@ -54,7 +56,7 @@ FORM;
         printf(<<<'FORM'
         <input type="checkbox" name="topping[]" value="%s" > %s : $%s <br><i>%s</i><br>
 FORM
-            ,$name, $name, $price, $desc);
+            , $name, $name, $price, $desc);
     }
 
     echo <<<'FORM'
@@ -68,39 +70,56 @@ FORM;
 /**
  * @param string $orderDetail
  */
-function displayOrder(){
+function displayOrder()
+{
     $items = menuItems::getItems();
     $quantity = $_POST['quantity'];
     $toppings = menuItems::getToppings();
     $subtotal = 0;
 
+
+    /**
+     *
+     *  Display item + price
+     *
+     */
     echo '<section id="secondcontent">';
-    foreach($items as $item){
-        if($_POST['flavor'] == $item->getName()){
+    foreach ($items as $item) {
+        if ($_POST['flavor'] == $item->getName()) {
             $name = $item->getName();
             $price = $item->getPrice();
             $subtotal += $price * $quantity;
-            printf("(%d) %s : <span>%.2f</span><br>",$quantity,$name,$price * $quantity);
+            printf("(%d) %s  <span>$%.2f</span><br>", $quantity, $name, $price * $quantity);
         }
     }
-    foreach($toppings as $topping){
-        foreach($_POST['topping'] as $orderTop)
-        if($orderTop == $topping->getName()){
-            $name = $topping->getName();
-            $price = $topping->getPrice();
-            $subtotal += $price;
-            printf("%s : <span>%.2f</span><br>",$name,$price);
+
+    /**
+     *
+     * Display each topping
+     *
+     */
+
+    foreach ($toppings as $topping) {
+        foreach ($_POST['topping'] as $orderTop) {
+            if ($orderTop == $topping->getName()) {
+                $name = $topping->getName();
+                $price = $topping->getPrice();
+                $subtotal += $price;
+                printf("%s  <span>$%.2f</span><br>", $name, $price);
+            }
         }
     }
+
+    /**
+     *
+     *
+     * Display order totals
+     *
+     */
 
     echo "<hr>";
-    printf("SUBTOTAL : <span>%.2f</span><br>",$subtotal);
-    printf("TAX : <span>%.2f</span><br>",$subtotal * .09);
-    printf("TOTAL : <span>%.2f</span><br>",$subtotal * 1.09);
-
-
+    printf("SUBTOTAL  <span>$%.2f</span><br>", $subtotal);
+    printf("TAX  <span>$%.2f</span><br>", $subtotal * .09);
+    printf("TOTAL  <span$%.2f</span><br>", $subtotal * 1.09);
     echo "<section>";
 }
-
-
-
