@@ -38,6 +38,8 @@ FORM
     }
 
 
+    /** Quantity Button */
+
     echo <<<'FORM'
     <tr><td>Choose a Quantity</td>
     <td><div>
@@ -83,6 +85,7 @@ function displayOrder()
      *  Display item + price
      *
      */
+
     echo '<section id="secondcontent">';
     foreach ($items as $item) {
         if ($_POST['flavor'] == $item->getName()) {
