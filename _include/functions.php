@@ -19,7 +19,7 @@ function displayForm()
     $toppings = menuItems::getToppings();
     printf(<<<'FORM'
     <form action="%s" method="post">
-    <p>Choose your flavor</p>
+    <h3>Choose your flavor</h3>
 FORM
 , PAGE);
 
@@ -41,12 +41,14 @@ FORM
     /** Quantity Button */
 
     echo <<<'FORM'
-    <tr><td>Choose a Quantity</td>
+    <br><br>
+    <tr><td><h3>Choose a Quantity</h3></td>
+    <br>
     <td><div>
     <span><button id="q-down" class="myButtonQ" type="button" data-index="1-1-4" data-sign="-">-</button></span>
     <input id="quantity" type="number" name="quantity" value="0">
     <span><button id="q-up" class="myButtonQ" type="button" data-index="1-1-4" data-sign="+">+</button></span>
-    </div></td></tr><hr><p>Choose your topping, $.99 each</p>
+    </div></td></tr><hr><h3>Choose your topping</h3>
 FORM;
 
     /** @var menuItems $toppings */
@@ -108,7 +110,7 @@ function displayOrder()
                 $name = $topping->getName();
                 $price = $topping->getPrice();
                 $subtotal += $price;
-                printf("%s  <span>$%.2f</span><br>", $name, $price);
+                printf(" + %s  <span>$%.2f</span><br>", $name, $price);
             }
         }
     }
@@ -123,6 +125,6 @@ function displayOrder()
     echo "<hr>";
     printf("SUBTOTAL  <span>$%.2f</span><br>", $subtotal);
     printf("TAX  <span>$%.2f</span><br>", $subtotal * .09);
-    printf("TOTAL  <span$%.2f</span><br>", $subtotal * 1.09);
+    printf("TOTAL  <span>$%.2f</span><br>", $subtotal * 1.09);
     echo "<section>";
 }

@@ -14,8 +14,11 @@ body {
     overflow: hidden;
 }
 header {
-    height: 100px;
+    height: 20vh;
+    min-height: 200px;
     padding: 0 15px;
+    background: url('https://www.campuscookie.com/images/A/ice_cream_banner.jpg');
+    background-size: cover;
 }
 #firstcontent {
     width: 590px;
@@ -45,7 +48,7 @@ footer {
     clear: both;
     padding: 0 15px;
 }
-
+input {margin-top: 15px;}
 input[type='number'] {
     -moz-appearance:textfield;
 }
@@ -148,7 +151,8 @@ header, #firstcontent, #secondcontent, #sidebar {
     background-color: #FEEC54;
     display: inline-block;
     cursor: pointer;
-    color: #ffffff;
+
+    color: black;
     font-family: Arial;
     font-size: 1.5em;
     padding: 8px 0px;
@@ -166,7 +170,7 @@ header, #firstcontent, #secondcontent, #sidebar {
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#DEC700 ', endColorstr='#FFE719',GradientType=0);
     background-color:#FFDC19 ;
     box-shadow: 0px 7px 0px 0px #FFE719;
-    color: #fff;
+    color: black;
 }
 
 .myButton:active {
@@ -182,7 +186,7 @@ header, #firstcontent, #secondcontent, #sidebar {
     background-color: #FEEC54;
     display: inline-block;
     cursor: pointer;
-    color: #ffffff;
+    color: black;
     font-family: Arial;
     font-size: 1em;
     padding: 8px 0px;
@@ -201,7 +205,7 @@ header, #firstcontent, #secondcontent, #sidebar {
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#DEC700 ', endColorstr='#FFE719',GradientType=0);
     background-color:#FFDC19 ;
     box-shadow: 0px 7px 0px 0px #FFE719;
-    color: #fff;
+    color: black;
 }
 
 .myButtonQ:active {
